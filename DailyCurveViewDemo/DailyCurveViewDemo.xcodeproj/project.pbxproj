@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45FABE8512BBB4D8F190D80A /* Pods_DailyCurveViewDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58B6AF5509E055CB7AD1396A /* Pods_DailyCurveViewDemo.framework */; };
 		A0F8C9A52DAD0C3400B0755D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0F8C99C2DAD0C3400B0755D /* Assets.xcassets */; };
 		A0F8C9A72DAD0C3400B0755D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0F8C99F2DAD0C3400B0755D /* LaunchScreen.storyboard */; };
 		A0F8C9A82DAD0C3400B0755D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0F8C9A12DAD0C3400B0755D /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58B6AF5509E055CB7AD1396A /* Pods_DailyCurveViewDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyCurveViewDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0F8C9832DAD0C2A00B0755D /* DailyCurveViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyCurveViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0F8C99B2DAD0C3400B0755D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0F8C99C2DAD0C3400B0755D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -30,6 +32,8 @@
 		A0F8C9B22DAD0C8A00B0755D /* DailyCurveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCurveModel.swift; sourceTree = "<group>"; };
 		A0F8C9B32DAD0C8A00B0755D /* DailyCurveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCurveView.swift; sourceTree = "<group>"; };
 		A0F8C9B42DAD0C8A00B0755D /* ScrollableCurveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableCurveView.swift; sourceTree = "<group>"; };
+		D11ED9382CD3766306AAC001 /* Pods-DailyCurveViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyCurveViewDemo.release.xcconfig"; path = "Target Support Files/Pods-DailyCurveViewDemo/Pods-DailyCurveViewDemo.release.xcconfig"; sourceTree = "<group>"; };
+		D419D874B6C7C3D1D6B46D48 /* Pods-DailyCurveViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyCurveViewDemo.debug.xcconfig"; path = "Target Support Files/Pods-DailyCurveViewDemo/Pods-DailyCurveViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45FABE8512BBB4D8F190D80A /* Pods_DailyCurveViewDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +53,8 @@
 			children = (
 				A0F8C9A42DAD0C3400B0755D /* DailyCurveViewDemo */,
 				A0F8C9842DAD0C2A00B0755D /* Products */,
+				E378F8FBE6322FC2113F516D /* Pods */,
+				C5990551D5C8ACBD901CF2F4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +83,23 @@
 			path = DailyCurveViewDemo;
 			sourceTree = "<group>";
 		};
+		C5990551D5C8ACBD901CF2F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58B6AF5509E055CB7AD1396A /* Pods_DailyCurveViewDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E378F8FBE6322FC2113F516D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D419D874B6C7C3D1D6B46D48 /* Pods-DailyCurveViewDemo.debug.xcconfig */,
+				D11ED9382CD3766306AAC001 /* Pods-DailyCurveViewDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,17 +107,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A0F8C9962DAD0C2B00B0755D /* Build configuration list for PBXNativeTarget "DailyCurveViewDemo" */;
 			buildPhases = (
+				0EC66AAA84164314B28DFD23 /* [CP] Check Pods Manifest.lock */,
 				A0F8C97F2DAD0C2A00B0755D /* Sources */,
 				A0F8C9802DAD0C2A00B0755D /* Frameworks */,
 				A0F8C9812DAD0C2A00B0755D /* Resources */,
+				CF47664FF26542EC4D842C1F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = DailyCurveViewDemo;
-			packageProductDependencies = (
-			);
 			productName = DailyCurveViewDemo;
 			productReference = A0F8C9832DAD0C2A00B0755D /* DailyCurveViewDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -145,6 +169,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0EC66AAA84164314B28DFD23 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DailyCurveViewDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF47664FF26542EC4D842C1F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DailyCurveViewDemo/Pods-DailyCurveViewDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DailyCurveViewDemo/Pods-DailyCurveViewDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DailyCurveViewDemo/Pods-DailyCurveViewDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A0F8C97F2DAD0C2A00B0755D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -183,12 +249,14 @@
 /* Begin XCBuildConfiguration section */
 		A0F8C9972DAD0C2B00B0755D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D419D874B6C7C3D1D6B46D48 /* Pods-DailyCurveViewDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YEAF8YMCJ6;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DailyCurveViewDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -211,12 +279,14 @@
 		};
 		A0F8C9982DAD0C2B00B0755D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D11ED9382CD3766306AAC001 /* Pods-DailyCurveViewDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YEAF8YMCJ6;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DailyCurveViewDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

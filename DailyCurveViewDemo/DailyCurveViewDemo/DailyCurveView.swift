@@ -15,35 +15,42 @@ class DailyCurveView: UIView {
         didSet { setNeedsDisplay() }
     }
     
-    // 白天曲线相关
-    var curveColor: UIColor = .systemBlue
-    /// 夜间曲线颜色
-    var nightCurveColor: UIColor = .systemOrange
-    /// 曲线线宽（两条曲线共用）
-    var lineWidth: CGFloat = 1.5
-    
-    // 点的属性（白天）
-    var pointRadius: CGFloat = 3.0
+    // 白天颜色相关
+    /// 白天曲线颜色
+    var curveColor: UIColor = .color24714033
     /// 白天点内部填充色
     var pointFillColor: UIColor = .white
     /// 白天点描边颜色
-    var pointStrokeColor: UIColor = .systemBlue
+    var pointStrokeColor: UIColor = .color24714033
     /// 白天点描边线宽
     var pointLineWidth: CGFloat = 1.0
-
+    
+    /// 夜间曲线颜色
+    var nightCurveColor: UIColor = .color87155255
     // 夜间点的属性
     var nightPointFillColor: UIColor = .white
-    var nightPointStrokeColor: UIColor = .systemOrange
+    var nightPointStrokeColor: UIColor = .color87155255
     var nightPointLineWidth: CGFloat = 1.0
+    
+    /// 曲线线宽（白天夜间两条曲线共用）
+    var lineWidth: CGFloat = 1.5
+    /// 点的属性
+    var pointRadius: CGFloat = 3.0
+    
 
     // MARK: - 绘制
     /// 自定义视图绘制方法，绘制白天和夜间的温度曲线、数据点和温度标签
     override func draw(_ rect: CGRect) {
+        
+        print("draw:", rect)
+        print("SCREEN_WIDTH:", SCREEN_WIDTH)
+
+        
         // 如果数据为空，直接跳过绘制
         guard !dailyWeatherList.isEmpty else { return }
 
         // 定义左右和上下的绘图边距，确保图形不贴边
-        let margin: CGFloat = 50
+        let margin: CGFloat = 20
         
         let effectiveRect = CGRect(x: rect.origin.x + margin,
                                    y: rect.origin.y + 150,
@@ -51,17 +58,15 @@ class DailyCurveView: UIView {
                                    height: 100)  // 只在视图中间 100 高度区域绘制
         
         // ✅ 可视化绘图区域（调试用，红色半透明背景）
-        let debugPath = UIBezierPath(rect: effectiveRect)
-        UIColor.red.withAlphaComponent(0.1).setFill()
-        debugPath.fill()
+//        let debugPath = UIBezierPath(rect: effectiveRect)
+//        UIColor.blue.withAlphaComponent(0.1).setFill()
+//        debugPath.fill()
         
         
         // 获取当前绘图上下文
         let context = UIGraphicsGetCurrentContext()!
 
         // 生成白天原始点，x 根据间距偏移，y 是原始温度值（未缩放）
-        
-        
         let dayRawPoints = dailyWeatherList.enumerated().map {
             CGPoint(x: CGFloat($0.offset) * xSpacing + margin, y: $0.element.dayTemp)
         }
@@ -227,8 +232,8 @@ class DailyCurveView: UIView {
 
         // 配置文字样式
         let textAttributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.systemFont(ofSize: 10),
-            .foregroundColor: UIColor.black
+            .font: UIFont.systemFont(ofSize: 15, weight: .bold),
+            .foregroundColor: UIColor.colorDarkGray
         ]
 
         // 绘制每个数据点及其对应文字
@@ -315,6 +320,5 @@ class DailyCurveView: UIView {
         return path
     }
 }
-
 
 
