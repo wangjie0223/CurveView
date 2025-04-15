@@ -58,5 +58,7 @@
 - 支持多种单位及样式切换
 
 ---
+<img width="419" alt="image" src="https://github.com/user-attachments/assets/6698c34e-46bc-4e7c-8976-cf4c2b09447c" />
+
 
 📌 欢迎 Star / Fork / Issues 提建议 🙌
